@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>대흥동 청소년 문화의 집 예약 프로그램</title>
+        <!--한글&영문 글씨체 적용 링크-->
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Open+Sans+Condensed:300|ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Serif+KR|Open+Sans+Condensed:300|ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- 스크롤 배너-->
+        <div id="box">
+            <!--관리 버튼 모음-->
+            <button id="adder" class="MBtn">예약하기</button>
+            <button id="modifyer" class="MBtn">변경하기</button>
+            <button id="deleter" class="MBtn">삭제하기</button>  
+            <button id="store" class="MBtn">엑셀<br/>저장내역</button>  
+        </div>
+
+        <p id="about">※대흥동 청소년 문화의 집 시설 관리 프로그램입니다.<br/>
+        (관리자 외에 사용할 수 없습니다.)</p>
+
+        <div class="container">
+        <div class="row">
+            <div id="pc" class="col-6 col-xl-3">
+                <div id="infoPC" class="info"> 
+                    <p>PC</p>
+                </div>
+                    <div id="showPC">
+                        <!--PC 예약을 보여줄 수 있는 칸-->
+                        <table id="tablePC">
+                            <tr>
+                                <td>PC 1</td>
+                                <td>PC 2</td>
+                            </tr>
+                            <tr>
+                                <td>PC 3</td>
+                                <td>PC 4</td>
+                            </tr>
+                            <tr>
+                                <td>PC 5</td>
+                                <td>PC 6</td>
+                            </tr>
+                        </table>
+                    </div>
+            </div>
+
+            <div id="room" class="col-6 col-xl-3">
+                <div id="infoRoom" class="info">
+                    <p>Room</p>
+                </div>
+                    <div id="showRoom">
+                        <!--방 예약을 보여줄 수 있는 칸-->
+                        <table id="tableRoom">
+                            <tr class="korean">
+                                <td>다목적실</td>
+                                <td>창작동아리방</td>
+                            </tr>
+                            <tr class="korean">
+                                <td>음향실</td>
+                                <td>회의실</td>
+                            </tr>
+                            <tr>
+                                <td>Will 1</td>
+                                <td>Will 2</td>
+                            </tr>
+                        </table>
+                    </div>
+            </div>
+
+         <!--관리자가 직접 제어할 수 있는 영역-->
+         <div id="admin" class="col-12 col-xl-6">
+            <!--표시되어야 할 것
+            1. 현재 사용하고 있는 시설 - 이름 - 시작시간 - 종료 시간이 뜨도록
+            2. 칸에는 몇 분이 남았는지 표기하기 (실시간)
+            3. 사용하고 있는 사람의 정보 옆에 종료, 취소 버튼 넣기
+            4. 방 같은 경우 오늘 사용자가 몇 명이 있는지 바로 확인할 수 있도록 보이게 하기
+            * 이 모든 것은 표 형식으로 나타내기 (스크롤)-->
+            <div id="ManageAdmin" class="info"> 
+                <p>Management</p>
+            </div>
+            <div id="state">
+            <table class="showList">
+                    <tr style="height: 45px;">
+                        <td class="used">PC 2</td>
+                        <td class="name">김무명</td>
+                        <td class="start">13:00</td>
+                        <td class="finish">14:00</td>
+                        <td class="delete">
+                            <button class="delBtn">삭제</button>
+                        </td>
+                        <td class="complete">
+                            <button class="comBtn">사용완료</button>
+                        </td>
+                    </tr>
+                    <tr style="height: 45px;">
+                        <td class="used">PC 2</td>
+                        <td class="name">김무명</td>
+                        <td class="start">13:00</td>
+                        <td class="finish">14:00</td>
+                        <td class="delete">
+                            <button class="delBtn">삭제</button>
+                        </td>
+                        <td class="complete">
+                            <button class="comBtn">사용완료</button>
+                        </td>
+                    </tr>
+                    <tr style="height: 45px;">
+                        <td class="used">PC 2</td>
+                        <td class="name">김무명</td>
+                        <td class="start">13:00</td>
+                        <td class="finish">14:00</td>
+                        <td class="delete">
+                            <button class="delBtn">삭제</button>
+                        </td>
+                        <td class="complete">
+                            <button class="comBtn">사용완료</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            </div>
+
+            <div id="todayState" class="col-12 col-xl-10">
+              <!--PC-시간 또는 대여시설-시간의 정보로 오늘 예약된 내역을 한꺼번에 보여준다-->
+                <br/>
+                <div id="State" class="info"> 
+                    <p>Today's List</p>
+                </div>
+        
+                <div id="selectThis">
+                <div class="select_box">
+                        <!--이용 시설 검색-->
+                        <input type="checkbox" value="room" class="whatShow">
+                        <label id="usingThis_label">이용 시설 : </label>
+                        <select class="select_ect" id="used" name = "used">
+                            <option value="음향실">음향실</option>
+                            <option value="동아리방">창작 동아리방</option>
+                            <option value="회의방">회의방</option>
+                            <option value="다목적홀">다목적 홀</option>
+                        </select>
+                        <input type="time" value="10:00" min="10:00" max="19:00" class="select">
+
+                        <br/>
+                        <input type="checkbox" value="room" class="whatShow">
+                        <!--PC 사용 검색-->
+                        <label id="usingPc_label">PC 번호선택 : </label>
+                        <select class="select_ect" id="pc" name = "pc">
+                            <option value="1">1번</option>
+                            <option value="2">2번</option>
+                            <option value="3">3번</option>
+                            <option value="4">4번</option>
+                            <option value="5">5번</option>
+                            <option value="6">6번</option>
+                        </select>
+                        <input type="time" value="10:00" min="10:00" max="19:00" class="select">
+                </div>
+                <br/>
+                <div id="today">
+                <table class="showToday">
+                        <tr style="height: 45px;">
+                            <td class="used">PC 2</td>
+                            <td class="name">김무명</td>
+                            <td class="start">2020-01-23 13:00</td>
+                            <td class="finish">2020-01-23 14:00</td>
+                            <td class="delete">
+                                <button class="delBtn">삭제</button>
+                            </td>
+                            <td class="complete">
+                                <button class="comBtn">변경</button>
+                            </td>
+                        </tr>
+                        <tr style="height: 45px;">
+                            <td class="used">PC 2</td>
+                            <td class="name">김무명</td>
+                            <td class="start">2020-01-23 13:00</td>
+                            <td class="finish">2020-01-23 14:00</td>
+                            <td class="delete">
+                                <button class="delBtn">삭제</button>
+                            </td>
+                            <td class="complete">
+                                <button class="comBtn">변경</button>
+                            </td>
+                        </tr>
+                        <tr style="height: 45px;">
+                            <td class="used">PC 2</td>
+                            <td class="name">김무명</td>
+                            <td class="start">2020-01-23 13:00</td>
+                            <td class="finish">2020-01-23 14:00</td>
+                            <td class="delete">
+                                <button class="delBtn">삭제</button>
+                            </td>
+                            <td class="complete">
+                                <button class="comBtn">변경</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    
+                </div>
+        </div>
+        <div id="writeMemo" class="col-12 col-xl-2">
+            <!--간단하게 메모 가능-->
+              <br/>
+              <div id="memo" class="info"> 
+                  <p>Memo</p>
+              </div>
+              <div id="showMemo">
+
+              </div>
+        </div>
+    </div>
+
+        <script src="reservation.js"></script>
+        <link rel="stylesheet" href="total.css">
+    </body>
+</html>

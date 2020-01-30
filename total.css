@@ -1,0 +1,229 @@
+/*글씨체 적용 방법
+1. font-family: 'Nanum Myeongjo', serif; (한글체)
+2. font-family: 'Nanum Myeongjo', serif; (영문체)
+   font-family: 'ZCOOL QingKe HuangYou', cursive;
+3. font-family: 'Nanum Myeongjo', serif; (영문체)
+   font-family: 'ZCOOL QingKe HuangYou', cursive;
+   font-family: 'Open Sans Condensed', sans-serif;
+4. font-family: 'Nanum Myeongjo', serif; (한글체)
+   font-family: 'ZCOOL QingKe HuangYou', cursive;
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-family: 'Noto Serif KR', serif;
+*/
+body {
+    font-family: 'Nanum Myeongjo', serif;
+    text-align: center;
+}
+
+
+.info {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    width: 200px;
+    height: 30px;
+    vertical-align: middle;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+
+tr, td {
+    font-size: 18px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-weight: 600;
+    vertical-align: top;
+    text-align: left;
+    border: solid 3px black;
+    width: 150px;
+    height: 130px;
+    border-radius: 5px;
+}
+
+.korean{
+    font-family: 'Noto Serif KR', serif;
+}
+
+#about {
+    margin-top: 1%;
+    line-height: 20px;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#state {
+    overflow: scroll;
+    width: 800px;
+    height: 390px;
+    border: solid 3px black;
+    border-radius: 5px;
+}
+
+#today {
+    overflow: scroll;
+    width: 800px;
+    height: 300px;
+    border: solid 3px black;
+    border-radius: 5px; 
+    margin-bottom: 3%;
+}
+
+#Btns {
+    margin-top: 80px;
+    border: dotted 1px black;
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    padding: 10px;
+}
+table.showList tr{
+    height: 45px;
+    border: none;
+}
+
+table.showList td{
+    height: 45px;
+    border: solid 2px black;
+}
+
+td.used{
+    font-family: 'Noto Serif KR', serif;
+    align-items: center;
+    vertical-align: middle;
+    height: 45px;
+    text-align: center;
+    width: 160px;
+}
+
+td.name{
+    font-family: 'Noto Serif KR', serif;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    width: 120px;
+}
+
+td.start{
+    font-family: 'Noto Serif KR', serif;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    width: 170px;
+}
+
+td.finish{
+    font-family: 'Noto Serif KR', serif;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    width: 170px;
+}
+
+td.delete{
+    font-family: 'Noto Serif KR', serif;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    width: 80px;
+}
+
+td.complete{
+    font-family: 'Noto Serif KR', serif;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    width: 100px;
+}
+
+.delBtn {   
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.comBtn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+#selectThis {
+    text-align: left;     
+}
+
+label {
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.select {
+    font-family: 'Noto Serif KR', serif;
+    border: solid 2px black;
+    border-radius: 5px;
+    height: 30px;
+    margin: 2px;
+}
+
+select {
+    font-family: 'Noto Serif KR', serif;
+    border: solid 2px black;
+    border-radius: 5px;
+    height: 30px;
+    margin: 2px;
+}
+
+table.showToday tr{
+    height: 45px;
+    border: none;
+}
+
+table.showToday td{
+    height: 45px;
+    border: solid 2px black;
+}
+
+#showMemo {
+    border: solid 3px black;
+    border-radius: 5px;
+    width: 420px;
+    height: 390px;
+    margin-bottom: 3%;
+}
+
+.MBtn {
+    background-color: black;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 400;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    margin: 12px;
+}
+
+#store {
+    height: 70px;
+}
+
+#box {
+    border: solid 3px black;
+    border-radius: 10px;
+    background-color: white;
+    position: fixed; 
+    right: 85%; 
+    top: 50px;
+    text-align:center; 
+    width: 180px;
+}
